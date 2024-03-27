@@ -200,8 +200,7 @@ a {
 	.header {
 		background-image: url("../img/banner-bg-tablet.jpg");
 		height: 392px;
-		max-width: 768px;
-		min-width: 641px;
+		width: 100%;
 		padding-top: 50px
 	}
 
@@ -362,8 +361,7 @@ a {
 	.header {
 		background-image: url("../img/banner-mobile.jpg");
 		height: 639px;
-		max-width: 360px;
-		width: auto;
+		width: 100%;
 		margin: auto auto;
 		padding-top: 30px;
 	}
@@ -879,18 +877,15 @@ a {
 
 #popup {
 	width: 280px;
-	height: 450px;
 	text-align: center;
 	padding: 40px 30px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	margin: auto;
 	background: #fff;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .tape-text-popaup {
@@ -927,13 +922,14 @@ a {
 }
 
 .radio-answer {
-	accent-color: #b69f5c;
+	accent-color: rgb(148, 131, 82);
 }
 
 .popup-textarea {
 	border: none;
 	background-color: #f3f7f6;
 	padding: 10px;
+	margin-bottom: 30px;
 }
 
 #zatemnenie:target {
@@ -948,6 +944,8 @@ a {
 	height: 20px;
 	width: 20px;
 	font-weight: 1000;
+	border: none;
+
 	position: absolute;
 	top: -33px;
 	right: 0;
@@ -1025,7 +1023,6 @@ a {
 	grid-template-columns: repeat(auto, 1fr);
 	grid-template-rows: repeat(auto, 1fr);
 	justify-content: center;
-	align-items: flex-start;
 }
 
 .shop-tape-section {
@@ -1053,6 +1050,7 @@ picture {
 	max-width: 340px;
 	border: #b59f5b 3px solid;
 	box-sizing: border-box;
+	flex-grow: 1;
 
 	padding: 50px 22px 20px 20px;
 
@@ -1115,7 +1113,8 @@ picture {
 
 .footer-dark-element {
 	padding-bottom: 31px;
-	width: 100%;
+	width: 90%;
+	margin: 0 auto;
 	background-color: #f4f7f6;
 	margin: 0 auto;
 }
